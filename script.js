@@ -13,14 +13,14 @@ let songSelected = false;
 let mediaQueryList = window.matchMedia('(max-width: 1230px)');
 
 const getData = async () => {
-    let request = await fetch ('https://lenguajejs.com/retos/nivel-medio/mp3-player/songs.json.txt');
+    let request = await fetch ('jsonFile/mp3Songs.txt');
     let data = await request.json();
     return data;
 }
 const printData = (playList) => {
     let cover = document.getElementById('cover');
     let songInfo = document.getElementById('songInfo');
-    cover.style.backgroundImage = `url(/images/${playList[index].image})`;
+    cover.style.backgroundImage = `url(${playList[index].image})`;
     songInfo.innerHTML = `<h1>${playList[index].title}</h1>
     <h5>${playList[index].artist}</h5>`;
     checkBckBtnAllowed(playList);
