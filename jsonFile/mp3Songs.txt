@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Arbol Sin Hojas",
+    "artist": "Dread Mar I",
+    "url": "/urlSongs/arbolSinHojas.mp3",
+    "image": "arbolSinHojas.jpg"
+  },
+  {
+    "title": "Asi Fue",
+    "artist": "Dread Mar I",
+    "url": "/urlSongs/asiFue.mp3",
+    "image": "asiFue.jpg"
+  },
+  {
+    "title": "Tu Sin Mi",
+    "artist": "Dread Mar I",
+    "url": "/urlSongs/tuSinMi.mp3",
+    "image": "tuSinMi.jpg"
+  },
+  {
+    "title": "Hoja En Blanco",
+    "artist": "Dread Mar I",
+    "url": "/urlSongs/hojaEnBlanco.mp3",
+    "image": "hojaEnBlanco.jpg"
+  }
+]

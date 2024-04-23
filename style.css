@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Flex", sans-serif;
+    user-select: none;
+}
+body {
+    background: #8685a2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+h5 {
+    color: #888;
+    font-weight: 400;
+    font-size: 15px;
+}
+ul {
+    padding: 15px 30px;
+    font-weight: 600;
+}
+li {
+    border-bottom: solid 0.5px;
+    padding: 10px 0;
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.5s;
+}
+li:hover {
+    background: #9493b2;
+}
+#mp3Player {
+    width: 350px;
+    height: max-content;
+    background: #fff;
+    box-shadow: 0 0 10px;
+    position: relative;
+}
+.backgroundCover {
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+#mp3Btns {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+#pauseBtn {
+    display: none;
+}
+.progress {
+    width: 100%;
+    position: relative;
+    bottom: -4px;
+    cursor: pointer;
+    appearance: none;
+    background: #999;
+    height: 10px;
+}
+.progress::-webkit-slider-thumb {
+    appearance: none;
+    background-color: #006;
+    height: 10px;
+    width: 30px;
+}
+#playlist {
+    position: absolute;
+    right: 0;
+    transform: translate(-20px, 20px);
+    font-size: 25px;
+    color: #ddd;
+}
+#cover {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    object-fit: cover;
+}
+.playlistSongs {
+    opacity: 0;
+    width: 240px;
+    background: #c1b9d3;
+    position: absolute;
+    top: 0;
+    transform: translateY(10px);
+    box-shadow: 0 0 10px;
+    transition: left 0.5s, opacity 0.5s;
+    z-index: -10;
+}
+.songTime {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-weight: 700;
+    transform: translateY(-30px);
+    color: #fff;
+    font-size: 20px;
+}
+.hidden, .show-mediaQuery, .hidden-mediaQuery {
+    left: 6%;
+}
+.show {
+    left: 105%;
+    opacity: 1;
+}
+.show-mediaQuery {
+    top: 50px;
+    opacity: 1;
+}
+.hidden-mediaQuery {
+    top: 50px;
+    opacity: 0;
+}
+.fa-solid {
+    cursor: pointer;
+}
+.info-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    height: 250px;
+}
+#songInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50%;
+}
+.notAllowed {
+    color: #ddd;
+    cursor: not-allowed;
+}

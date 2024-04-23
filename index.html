@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/79a487990f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>MP3 Player</title>
+</head>
+<body>
+    <div id="mp3Player">
+        <div class="backgroundCover">
+            <i class="fa-solid fa-bars" id="playlist"></i>
+            <ul id="playlistSongs" class=" playlistSongs hidden"></ul>
+            <div id="cover"></div>
+            <div class="songTime">
+                <p id="currentTime">0:00</p>
+                <p id="duration">--:--</p>
+            </div>
+        </div>
+        <div class="info-btns">
+            <div id="songInfo"></div>
+            <div id="mp3Btns">
+                <i class="fa-solid fa-backward-step" id="bckBtn"></i>
+                <i class="fa-solid fa-play" id="playBtn"></i>
+                <i class="fa-solid fa-pause" id="pauseBtn"></i>
+                <i class="fa-solid fa-forward-step" id="fwdBtn"></i>
+            </div>
+        </div>
+        <input type="range" value=0 id="slider" class="progress">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
