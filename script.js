@@ -13,7 +13,7 @@ let songSelected = false;
 let mediaQueryList = window.matchMedia('(max-width: 1230px)');
 
 const getData = async () => {
-    let request = await fetch ('/jsonFile/mp3Songs.txt');
+    let request = await fetch ('https://lenguajejs.com/retos/nivel-medio/mp3-player/songs.json.txt');
     let data = await request.json();
     return data;
 }
