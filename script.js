@@ -159,44 +159,44 @@ const checkBckBtnAllowed = (playList) => {
 const showPlaylist = () => {
     playlist.addEventListener('click', () => {
         if (mediaQueryList.matches) {
-            if (showingPlaylist == false) {
-                playlistSongs.classList.remove('hidden');
-                playlistSongs.classList.remove('show');
-                playlistSongs.classList.remove('hidden-mediaQuery');
-                playlistSongs.classList.add('show-mediaQuery');
-                playlistSongs.style.zIndex = '0';
-                showingPlaylist = true;
-            }
-            else {
-                playlistSongs.classList.remove('hidden');
-                playlistSongs.classList.remove('show');
-                playlistSongs.classList.remove('show-mediaQuery');
-                playlistSongs.classList.add('hidden-mediaQuery');
+            showingPlaylist == false ? (
+                playlistSongs.classList.remove('hidden'),
+                playlistSongs.classList.remove('show'),
+                playlistSongs.classList.remove('hidden-mediaQuery'),
+                playlistSongs.classList.add('show-mediaQuery'),
+                playlistSongs.style.zIndex = '0',
+                showingPlaylist = true
+            ) 
+            : (
+                playlistSongs.classList.remove('hidden'),
+                playlistSongs.classList.remove('show'),
+                playlistSongs.classList.remove('show-mediaQuery'),
+                playlistSongs.classList.add('hidden-mediaQuery'),
                 setTimeout(() => {
                     playlistSongs.style.zIndex = '-10';
                     showingPlaylist = false;
-                }, 200);
-            }
+                }, 200)
+            )
         }
         else {
-            if (showingPlaylist == false) {
-                playlistSongs.classList.remove('hidden-mediaQuery');
-                playlistSongs.classList.remove('show-mediaQuery');
-                playlistSongs.classList.remove('hidden');
-                playlistSongs.classList.add('show');
+            showingPlaylist == false ? (
+                playlistSongs.classList.remove('hidden-mediaQuery'),
+                playlistSongs.classList.remove('show-mediaQuery'),
+                playlistSongs.classList.remove('hidden'),
+                playlistSongs.classList.add('show'),
                 setTimeout(() => {   
                     playlistSongs.style.zIndex = '0';
                     showingPlaylist = true;
-                }, 600);
-            }
-            else {
-                playlistSongs.classList.remove('hidden-mediaQuery');
-                playlistSongs.classList.remove('show-mediaQuery');
-                playlistSongs.classList.remove('show');
-                playlistSongs.classList.add('hidden');
-                playlistSongs.style.zIndex = '-10';
-                showingPlaylist = false;
-            }
+                }, 600)
+            ) 
+            : (
+                playlistSongs.classList.remove('hidden-mediaQuery'),
+                playlistSongs.classList.remove('show-mediaQuery'),
+                playlistSongs.classList.remove('show'),
+                playlistSongs.classList.add('hidden'),
+                playlistSongs.style.zIndex = '-10',
+                showingPlaylist = false
+            )
         }
     })
 }
