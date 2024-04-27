@@ -51,20 +51,27 @@ li:hover {
 #pauseBtn {
     display: none;
 }
-.progress {
+#containerProgress {
+    height: 10px;
     width: 100%;
+    background: #888;
     position: relative;
-    bottom: -4px;
-    cursor: pointer;
-    appearance: none;
-    background: #999;
-    height: 10px;
 }
-.progress::-webkit-slider-thumb {
-    appearance: none;
-    background-color: #006;
-    height: 10px;
-    width: 30px;
+#progressBar {
+    height: 100%;
+    background: #006;
+    width: 0;
+    position: absolute;
+    top: 0;
+    box-shadow: 0 0 10px;
+}
+#slider {
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+#slider::-webkit-slider-thumb  {
+    visibility: hidden;
 }
 #playlist {
     position: absolute;

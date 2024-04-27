@@ -2,6 +2,7 @@ let playBtn = document.getElementById('playBtn');
 let pauseBtn = document.getElementById('pauseBtn');
 let bckBtn = document.getElementById('bckBtn');
 let fwdBtn = document.getElementById('fwdBtn');
+let progressBar = document.getElementById('progressBar');
 let slider = document.getElementById('slider');
 let playlist = document.getElementById('playlist');
 let playlistSongs = document.getElementById('playlistSongs');
@@ -120,8 +121,8 @@ const updateSongData = (audio, playList) => {
 
 const updateSliderValue = (audio) => {
     audio.addEventListener('timeupdate', () => {
-        slider.max = audio.duration;
-        slider.value = audio.currentTime;
+        let getPer = Math.trunc((audio.currentTime)/(audio.duration)*100);
+        progressBar.style.width = `${getPer}%`;
     })
 }
 const updateSongTime = (audio) => {
@@ -147,9 +148,10 @@ const updateSongTime = (audio) => {
             playBtn.style.display = 'block';
             pauseBtn.style.display = 'none';
         }
-    })
-    slider.addEventListener('change', () => {
-        audio.currentTime = slider.value;
+        slider.addEventListener('change', () => {
+            progressBar.style.width = `${slider.value}%`;
+            audio.currentTime = slider.value*audio.duration/100;
+        })
     })
 }
 const checkBckBtnAllowed = (playList) => {
